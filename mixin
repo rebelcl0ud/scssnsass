@@ -1,0 +1,65 @@
+<div class="arrow"></div>
+
+- - - 
+
+@mixin createArrow($size, $side) {
+  @if $side == 'up' {
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid black;
+    &:hover {
+      width: 0;
+      height: 0;
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid cyan;
+    }
+  }
+  @else if $side == 'down' {
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid red;
+    &:hover {
+      width: 0;
+      height: 0;
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-top: $size solid cyan;
+    }
+  }
+  @else if $side == 'right' {
+    width: 0;
+    height: 0;
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid blue;
+     &:hover {
+      width: 0;
+      height: 0;
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-left: $size solid cyan;
+    }
+  }
+  @else if $side == 'left' {
+    width: 0;
+    height: 0;
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid green;
+    &:hover {
+       width: 0;
+      height: 0;
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-right: $size solid cyan;
+    }
+  }
+  
+}
+
+.arrow { @include createArrow(100px, 'right') }
