@@ -1,0 +1,172 @@
+/* used in codepen - SCSS */
+
+/**
+@extend; u can use to 'extend' class css into other elements
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$main-font: 'Roboto', sans-serif;
+
+* {
+ box-sizing: border-box;
+}
+
+.header {
+  background: cyan;
+  font-family: $main-font;
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+      list-style: none;
+      padding: 20px 10px;
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+article {
+  width: 1000px / 1250px * 100%;
+  display: inline-block;
+  float: left;
+  padding: 15px 20px;
+}
+
+aside {
+  width: 200px / 1000px * 100%;
+  display: inline-block;
+  padding: 10px;
+  img {
+    width: 100%;
+  }
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 auto;
+  &.primary {
+   background: blue;
+  }
+  &.danger {
+   background: red;
+  }
+  &.success {
+   background: green;
+  }
+  &.warning {
+   background: yellow;
+  }
+}
+
+- - - 
+
+/* SASS diff - no curly brackets, semi-colons, improper indentations will get called out */
+/* @extend; u can use to 'extend' class css into other elements */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+
+$main-font: 'Roboto', sans-serif
+
+*
+ box-sizing: border-box
+
+
+.header
+  background: cyan
+  font-family: $main-font
+  ul
+    padding: 0
+    margin: 0
+    li
+      display: inline-block
+      list-style: none
+      padding: 20px 10px
+   
+.container 
+  margin: 0 auto
+  &:after
+    clear: both
+    content: ""
+    display: table
+  
+article
+  width: 1000px / 1250px * 100%
+  display: inline-block
+  float: left
+  padding: 15px 20px
+  font-family: $main-font
+
+aside
+  width: 200px / 1000px * 100%
+  display: inline-block
+  padding: 10px
+  img
+    width: 100%
+
+.btn
+  padding: 10px 15px
+  border-radius: 5px
+  display: inline-block
+  margin: 0 auto
+  font-family: $main-font
+  &.primary
+   background: blue
+  &.danger
+   background: red
+  &.success
+   background: green
+  &.warning
+   background: yellow
+  
+.sub-header
+  font-family: $main-font
+
+
+<!-- HTML -->
+<div class="header">
+  <ul>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+  </ul>
+</div>
+<div class="container">
+<article>
+  Lorem ipsum dolor amet xOXO distillery farm-to-table iPhone taxidermy artisan. Four dollar toast heirloom tilde kinfolk hoodie mustache chillwave synth thundercats actually food truck put a bird on it artisan sartorial. You probably haven't heard of them tote bag poke actually taiyaki tofu pour-over heirloom tbh listicle. Freegan lyft hot chicken air plant, direct trade semiotics meh brooklyn whatever edison bulb truffaut artisan fam bitters kickstarter.
+</article>
+
+<aside>
+  <img src="https://storycase.co.uk/radio/wp-content/uploads/2013/12/Rear5.jpg">
+</aside>
+</div>
+<div class="btn primary">
+    primary
+  </div>
+  <div class="btn danger">
+    danger 
+  </div>
+  <div class="btn success">
+    success
+  </div>
+  <div class="btn warning">
+    warning
+  </div>
+<div class="sub-header">
+  <ul>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+  </ul>
+</div>
+
